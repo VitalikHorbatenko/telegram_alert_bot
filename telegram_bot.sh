@@ -69,6 +69,7 @@ LOAD_TIME=$(curl -o /dev/null -s -w "%{time_total}\n" $URL)
 echo "Time to load $URL: $LOAD_TIME seconds"
 
 # Checking if the load time exceeds the treshhold
+# bc -l is used to handle floating-point comparisons
 if (( $(echo "$LOAD_TIME > $THRESHOLD" | bc -l) )); then
   # If yes, such a message is sent to Telegram chanel
   MESSAGE="⚠️ Alert! The load time for $URL exceeded the threshold. It took $LOAD_TIME seconds to load."
