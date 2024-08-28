@@ -16,7 +16,7 @@
 #  *: hour (0–23)
 #  *: day of the month (1-31)
 #  *: month (1–12)
-#  *: day of the week (0–7, where Sunday can be either 0 or 7)
+#  *: day of the week (0–7, where Sunday can be either 0 or 7).
 #  5. Set up secure permissions and make the script executable
 #    chmod 700 /path/to/your/script.sh
 #  6. Check if the script works correctly
